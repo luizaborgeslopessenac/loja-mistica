@@ -102,5 +102,3 @@ git remote add origin https://github.com/SEU-USUARIO/loja-mistica.git
 git push -u origin main
 ```
 
-Dica: se o trabalho for em equipe, cada pessoa faz seus próprios commits (com o próprio `git config user.name`).
-Antes de enviar, confirme com `git status` que o arquivo `.env` **não** aparece na lista.
