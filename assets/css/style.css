@@ -1,0 +1,101 @@
+:root {
+    --noite: #130f1f;
+    --noite-2: #1c1630;
+    --nevoa: #2b2245;
+    --ametista: #8b6fe0;
+    --ouro: #d4ad62;
+    --ouro-escuro: #b38d45;
+    --lua: #ece8f4;
+    --quartzo: #e3a8bd;
+    --fonte-titulo: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --fonte-texto: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background: radial-gradient(ellipse at 50% -10%, #2a1f4d 0%, var(--noite) 55%) fixed;
+    color: var(--lua);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main { flex: 1 0 auto; }
+h1, h2, h3, h4, .titulo-arcano, .marca { font-family: var(--fonte-titulo); letter-spacing: .01em; }
+h1, h2, h3 { font-weight: 700; }
+
+/* Navegação */
+.navbar-arcana {
+    background: rgba(19, 15, 31, .92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(212, 173, 98, .25);
+}
+.marca { font-size: 1.6rem; font-weight: 700; color: var(--ouro) !important; display: inline-flex; align-items: center; gap: .55rem; }
+.marca-lua {
+    width: 1.1rem; height: 1.1rem; border-radius: 50%;
+    background: var(--ouro);
+    box-shadow: inset -.42rem 0 0 0 var(--noite);
+}
+.busca-nav { max-width: 26rem; }
+.badge-carrinho { background: var(--ametista); color: #fff; }
+
+/* Botões */
+.btn-ouro { background: var(--ouro); border-color: var(--ouro); color: #1a1326; font-weight: 600; }
+.btn-ouro:hover, .btn-ouro:focus { background: var(--ouro-escuro); border-color: var(--ouro-escuro); color: #1a1326; }
+.btn-outline-ouro { color: var(--ouro); border-color: var(--ouro); }
+.btn-outline-ouro:hover, .btn-outline-ouro:focus { background: var(--ouro); color: #1a1326; }
+.btn:focus-visible, .form-control:focus, .form-select:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 .2rem rgba(139, 111, 224, .45);
+}
+a { color: var(--ouro); }
+a:hover { color: #ecc886; }
+
+/* Vitrine */
+.hero { padding: 3.5rem 0 2rem; }
+.hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.05; max-width: 14ch; }
+.hero p { max-width: 46ch; color: #b9b2cc; }
+.hero-lua {
+    width: clamp(120px, 22vw, 220px); aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #f6e7bd, var(--ouro) 60%, var(--ouro-escuro));
+    box-shadow: inset -2.8rem 0 0 0 var(--noite), 0 0 60px rgba(212, 173, 98, .25);
+    margin-left: auto;
+}
+.chip-categoria {
+    border: 1px solid rgba(212, 173, 98, .35); color: var(--lua); border-radius: 999px;
+    padding: .35rem .95rem; text-decoration: none; font-size: .92rem; background: transparent;
+}
+.chip-categoria:hover { border-color: var(--ouro); color: var(--ouro); }
+.chip-categoria.ativa { background: var(--ouro); color: #1a1326; border-color: var(--ouro); font-weight: 600; }
+
+.card-produto {
+    background: var(--noite-2); border: 1px solid rgba(255, 255, 255, .07); border-radius: .75rem; overflow: hidden; height: 100%;
+}
+.card-produto:hover { border-color: rgba(212, 173, 98, .5); }
+.card-produto img { aspect-ratio: 1; object-fit: cover; width: 100%; background: var(--nevoa); }
+.card-produto .nome { font-family: var(--fonte-titulo); font-size: 1.3rem; font-weight: 700; color: var(--lua); text-decoration: none; line-height: 1.15; }
+.preco { color: var(--ouro); font-weight: 600; font-size: 1.15rem; }
+.preco-grande { font-family: var(--fonte-titulo); font-size: 2.4rem; color: var(--ouro); font-weight: 700; }
+
+/* Páginas internas */
+.titulo-arcano { color: var(--lua); }
+.painel {
+    background: var(--noite-2); border: 1px solid rgba(255, 255, 255, .08); border-radius: .75rem; padding: 1.5rem;
+}
+.img-detalhe { width: 100%; border-radius: .75rem; background: var(--nevoa); aspect-ratio: 1; object-fit: cover; }
+.img-mini { width: 64px; height: 64px; object-fit: cover; border-radius: .5rem; background: var(--nevoa); }
+.table { --bs-table-bg: transparent; }
+.input-qtd { max-width: 5.5rem; }
+
+/* Pagamento */
+.opcao-pagamento {
+    display: block; border: 1px solid rgba(255, 255, 255, .15); border-radius: .75rem; padding: 1rem 1.1rem;
+    cursor: pointer; background: var(--noite);
+}
+.opcao-pagamento:hover { border-color: var(--ouro); }
+.opcao-pagamento.selecionada { border-color: var(--ouro); background: var(--nevoa); }
+
+.rodape { border-top: 1px solid rgba(212, 173, 98, .2); }
+.admin-aviso { border-left: 3px solid var(--ametista); }
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
