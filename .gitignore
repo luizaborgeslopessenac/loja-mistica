@@ -1,0 +1,30 @@
+# Credenciais reais (nunca versionar)
+.env
+.env.*
+!.env.example
+
+# Uploads feitos pelo painel admin (mantém só a pasta)
+uploads/produtos/*
+!uploads/produtos/.gitkeep
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos temporários e logs
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Editores / IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dependências (caso sejam usadas no futuro)
+vendor/
+node_modules/
