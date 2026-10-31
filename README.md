@@ -1,22 +1,10 @@
 # Arcana Lunar — Loja de produtos místicos
 
-Aplicação web de comércio eletrônico (Atividade Final do 4º Bimestre — SENAC) com fluxo de venda completo:
-vitrine → produto → carrinho → login/cadastro → checkout simulado → pedido gravado com baixa de estoque → painel administrativo.
-
 **Stack:** HTML5, CSS3, Bootstrap 5, JavaScript, PHP (Apache/XAMPP), MySQL/MariaDB via PDO.
-
-## Como rodar (XAMPP)
-
-1. Instale o XAMPP (PHP 7.4 ou superior; recomendado 8.x) e inicie **Apache** e **MySQL**.
-2. Copie esta pasta para `C:\xampp\htdocs\loja-mistica` (o nome da pasta deve bater com `APP_BASE_URL`).
-3. Crie o banco: abra o phpMyAdmin → **Importar** → selecione `database/schema.sql`
-   (ou no terminal: `mysql -u root -p < database/schema.sql`).
-4. Crie o arquivo de configuração: copie `.env.example` para `.env` e ajuste os dados do seu MySQL.
-5. Acesse <http://localhost/loja-mistica/>.
 
 > Bootstrap e as fontes são carregados por CDN, então o computador precisa de internet.
 
-### Contas de teste (criadas pelo schema.sql)
+### Contas de teste 
 
 | Perfil | E-mail | Senha |
 |---|---|---|
@@ -68,7 +56,7 @@ Extras de segurança: token CSRF em todos os formulários POST, escape de saída
 cookie de sessão HttpOnly/SameSite, validação de upload (tipo real, tamanho, nome aleatório), bloqueio de execução de PHP em `uploads/`,
 `.htaccess` bloqueando `.env` e pastas internas, preços sempre lidos do banco (o navegador não decide valores).
 
-## Entrega via Git (obrigatório: repositório remoto, sem .zip, histórico com vários commits)
+## Entrega via Git 
 
 ```bash
 cd loja-mistica
